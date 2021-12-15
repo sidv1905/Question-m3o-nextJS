@@ -4,7 +4,7 @@ import { RestLink } from "apollo-link-rest";
 const restLink = new RestLink({
   uri: "https://api.m3o.com/v1/answer",
   headers: {
-    Authorization: "Bearer MWM4ZjJmMTItZmNjOS00YjRmLWE3ODYtZTNiNzdjNmZlZWM4",
+    Authorization: `Bearer ${process.env.NEXT_PUBLIC_TOKEN}`,
     "Content-Type": "application/json",
   },
   // other link options...
