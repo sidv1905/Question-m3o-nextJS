@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
 import { useLazyQuery } from "@apollo/client";
 import styles from "./SearchComponent.module.css";
-import { query } from "../../apis/queries/getAnswers";
+import { queryGet } from "../../apis/queries/getAnswers";
+import { BiSearchAlt } from "react-icons/bi";
+import { IconContext } from "react-icons";
+import AnswerDisplayComponent from "../AnswerDisplayComponent";
 
-const base_url = "https://api.m3o.com/v1/answer/Question";
-
-export default function SearchComponent() {
+export default function SearchComponent({ Serverdata }) {
+  console.log(Serverdata, "SERVER DATA");
   const [question, setQuestion] = useState("");
-  const [getAnswer, { loading, error, data }] = useLazyQuery(query, {
+  const [getAnswer, { loading, error, data }] = useLazyQuery(queryGet, {
     context: { clientName: "rest" },
     variables: {
       input: {
@@ -33,12 +35,11 @@ export default function SearchComponent() {
   };
 
   console.log(data, loading, error);
-  if (loading) {
-    return <div>Loading...</div>;
-  } else {
-    return (
-      <div className={styles.mainContainer}>
-        <h1>Enter question</h1>
+
+  return (
+    <div className={styles.mainContainer}>
+      <h1>Enter question</h1>
+      <div className={styles.inputSearch}>
         <input
           type="text"
           id="search"
@@ -47,12 +48,17 @@ export default function SearchComponent() {
           onChange={handleChange}
         />
         <button type="text" onClick={handleSubmit} id="search-button">
-          Search
+          <IconContext.Provider value={{ color: "white", size: 42 }}>
+            <BiSearchAlt height={100} width={100} />
+          </IconContext.Provider>
         </button>
-        <div className={styles.answerBox}>
-          <h3>Answer : {data?.getData?.answer}</h3>
-        </div>
       </div>
-    );
-  }
+      {(data?.getData || loading || Serverdata) && (
+        <AnswerDisplayComponent
+          loading={loading}
+          answer={data?.getData || Serverdata?.getData}
+        />
+      )}
+    </div>
+  );
 }

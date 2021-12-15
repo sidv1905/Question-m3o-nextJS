@@ -1,0 +1,58 @@
+.answerContainer {
+  border: 0.2px solid gray;
+  padding: 30px;
+  width: 30em;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+  line-height: 30px;
+}
+
+.answerContainer:hover {
+  transform: scale(1.05);
+}
+
+.card {
+  border: 1px solid lightblue;
+  transition: all 0.3s ease-in-out;
+
+  min-height: 20em;
+  position: relative;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 199px 0px;
+}
+.card:hover {
+  transform: rotate(-4deg) scale(1.05);
+}
+.background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  transform: translate(-50%, -50%);
+}
+.realImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+}
+.card .bottom {
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  justify-content: center;
+  text-decoration: none;
+
+  z-index: 3;
+}
+
+.inactive {
+  opacity: 0.5;
+  transform: translateX(-100%);
+}
+.active {
+  transform: translateX(0);
+  opacity: 1;
+}

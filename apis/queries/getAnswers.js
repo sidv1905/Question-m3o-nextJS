@@ -1,6 +1,6 @@
 import { gql } from "@apollo/client";
 
-export const query = gql`
+export const queryGet = gql`
   fragment Payload on REST {
     query: String
   }

@@ -4,11 +4,13 @@
   --font-stack: "Merriweather", serif;
   --main-bg-color: #2e3d58;
   --secondary-bg-color: #4d6693;
-  --tertiary-color: #69c2b4;
+  --tertiary--bg-color: #69c2b4;
   --dark-text-color: #d8d8d8;
   --light-text-color: #b3b3b3;
 }
-
+img[src=""] {
+  display: none;
+}
 html,
 body,
 #__next {
@@ -27,4 +29,65 @@ a {
 
 * {
   box-sizing: border-box;
+}
+button {
+  background-color: var(--main-bg-color);
+  color: whitesmoke;
+  border-radius: 4px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border: none;
+  font-family: var(--font-stack);
+  height: 2em;
+  width: 14em;
+}
+
+input {
+  color: black;
+  border-radius: 4px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border: none;
+  box-shadow: whitesmoke 0px 0px 0px 5px;
+  font-family: var(--font-stack);
+  height: 2em;
+  width: 14em;
+}
+
+.link {
+  position: relative;
+  cursor: pointer;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+::selection {
+  background: var(--tertiary--bg-color);
+  color: white;
+}
+p {
+  font-weight: 400;
 }
