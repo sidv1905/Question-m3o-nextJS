@@ -6,7 +6,7 @@ import { BiSearchAlt } from "react-icons/bi";
 import { IconContext } from "react-icons";
 import AnswerDisplayComponent from "../AnswerDisplayComponent";
 
-export default function SearchComponent({ Serverdata }) {
+export default function SearchComponent({ Serverdata, title }) {
   console.log(Serverdata, "SERVER DATA");
   const [question, setQuestion] = useState("");
   const [getAnswer, { loading, error, data }] = useLazyQuery(queryGet, {
@@ -38,12 +38,12 @@ export default function SearchComponent({ Serverdata }) {
 
   return (
     <div className={styles.mainContainer}>
-      <h1>Enter question</h1>
+      <h1>{title.title}</h1>
       <div className={styles.inputSearch}>
         <input
           type="text"
           id="search"
-          placeholder="Search..."
+          placeholder={title.Search}
           value={question}
           onChange={handleChange}
         />
