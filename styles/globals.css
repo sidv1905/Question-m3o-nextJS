@@ -91,3 +91,18 @@ input {
 p {
   font-weight: 400;
 }
+.search-icon:hover {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1) rotate(20deg);
+  }
+  100% {
+    transform: scale(1) rotate(30deg);
+  }
+}

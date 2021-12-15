@@ -1,34 +1,88 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# QA-Bank
 
-First, run the development server:
+A tool where you can ask question and you will get the answer instantly. 
 
+
+
+![Next JS](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+
+![React JS](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+
+## Screenshots
+
+![App Screenshot](FinalQABANK.gif)
+
+
+## Tech Stack
+
+**Client:** React, NextJS, Apollo-Client
+
+**Server:** NextJS Server ( Public API : https://m3o.com/answer)
+
+
+    1. Cache based request and response in apollo client (In Memory cache)
+    2. Rest-Link in apollo client to make requests to a REST Server
+    3. Internationalized routing with NextJS ( Without external library)
+    4. SSR and CSR both based on client requirements.
+    5. When query params come in, The page is generated on server.
+    6. CSR for quick response to user when question is typed.
+    7. Modular CSS
+    8. Added locales custom text only for static content.
+    9. Totally responsive with Hamburger menu.
+    
+
+
+## Installation
+
+To Install the project : 
+
+
+
+After cloning:
 ```bash
-npm run dev
-# or
-yarn dev
+
+  cd <my-project>
+  
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Now install all the node requirements.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```bash
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+  npm install
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+  npm run dev
+  
+```
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Environment Variables
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+To run this project, you will need to add the following environment variables to your .env file
 
-## Deploy on Vercel
+`TOKEN` (You can get this from https://m3o.com/answer or I can share the same)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Add the .env file in project root
+
+## Authors
+
+- [@sidv1905](https://www.github.com/sidv1905)
+
+
+## Feedback
+
+If you have any feedback, please reach out to us at sidvarangaonkar1905@gmail.com
+
+
+## 🚀 About Me
+I'm a full stack developer based in India, Spending majority of time with NextJS, React, Javascript and Python...
+
+Connect with me on [linkedin](https://www.linkedin.com/in/siddharth-varangaonkar-9b4a3a150/)
+## Acknowledgements
+
+ - Jurata team
+
+

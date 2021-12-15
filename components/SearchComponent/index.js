@@ -51,7 +51,7 @@ export default function SearchComponent({ Serverdata, title }) {
         />
         <button type="text" onClick={handleSubmit} id="search-button">
           <IconContext.Provider value={{ color: "white", size: 42 }}>
-            <BiSearchAlt height={100} width={100} />
+            <BiSearchAlt className="search-icon" height={100} width={100} />
           </IconContext.Provider>
         </button>
       </div>
