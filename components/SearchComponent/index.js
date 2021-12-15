@@ -24,6 +24,8 @@ export default function SearchComponent({ Serverdata, title }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // Check if in apollo client cache if not then go for server side
+
     getAnswer({
       context: { clientName: "rest" },
       variables: {
