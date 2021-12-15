@@ -19,3 +19,44 @@
 .right > * {
   margin-right: 3em;
 }
+.rightMobile {
+  display: None;
+  cursor: pointer;
+}
+.languageDrawer {
+  position: fixed;
+  transform: translateY(-100%);
+  background-color: var(--main-bg-color);
+  width: 100%;
+
+  padding: 15px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100px;
+  transition: all 1s ease-in;
+}
+.languageDrawer > * {
+  cursor: pointer;
+}
+.cross {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.activateDrawer {
+  transform: translateY(0%);
+}
+@media screen and (max-width: 759px) {
+  .right {
+    display: None;
+  }
+  .rightMobile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
