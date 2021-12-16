@@ -31,6 +31,7 @@ The reason I love NextJS :
 ![Next JS Supremacy](GithubImage/Performance.PNG)
 
 ## Installation
+Make sure you have nodejs, NPM, git installed in your computer. Google it based on your OS. 
 
 To Install the project :
 
