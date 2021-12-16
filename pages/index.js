@@ -25,7 +25,11 @@ export default function Home({ data }) {
   const router = useRouter();
   const { locale, locales, defaultLocale } = router;
   useEffect(() => {
-    notify("Welcome !");
+    if (locale == "en") {
+      notify("Welcome To English Version !");
+    } else if (locale == "de") {
+      notify("Welcome To German Version !");
+    }
   });
   return (
     <div className={styles.container}>
