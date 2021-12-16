@@ -6,7 +6,7 @@ import { BiSearchAlt } from "react-icons/bi";
 import { IconContext } from "react-icons";
 import AnswerDisplayComponent from "../AnswerDisplayComponent";
 import client from "../../apis/apollo-client";
-
+import { notify } from "../../pages";
 export default function SearchComponent({ Serverdata, title }) {
   const [question, setQuestion] = useState("");
   const [getAnswer, { loading, error, data }] = useLazyQuery(queryGet, {
@@ -36,12 +36,15 @@ export default function SearchComponent({ Serverdata, title }) {
         },
       });
       if (data) {
+        notify("Data From Cache ! Yes We have it");
         console.log(data, "data from cache");
       } else {
+        notify("Fetching for you from  m3o server");
         console.log("data from server");
       }
     } catch (err) {
-      console.log(err, "err data from cache");
+      notify("Data From Cache ! Yes We have it");
+      console.log(err, "err");
     } finally {
       getAnswer({
         context: { clientName: "rest" },
