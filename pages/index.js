@@ -1,5 +1,3 @@
-import Head from "next/head";
-import Image from "next/image";
 import client from "../apis/apollo-client";
 import { queryGet } from "../apis/queries/getAnswers";
 import styles from "../styles/Home.module.css";

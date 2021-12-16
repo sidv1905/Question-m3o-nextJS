@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { FaHamburger } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
-import { notify } from "../../pages";
+
 export default function Header({ rightHeader }) {
   const [showMenu, setShowMenu] = useState(false);
 
@@ -25,22 +25,10 @@ export default function Header({ rightHeader }) {
         <h4>QA-Bank</h4>
       </div>
       <div className={styles.right}>
-        <Link
-          href="/"
-          locale="en"
-          onClick={() => {
-            notify("Changed to English !");
-          }}
-        >
+        <Link href="/" locale="en">
           {rightHeader.English}
         </Link>
-        <Link
-          href="/"
-          locale="de"
-          onClick={() => {
-            notify("Changed to German !");
-          }}
-        >
+        <Link href="/" locale="de">
           {rightHeader.German}
         </Link>
       </div>
