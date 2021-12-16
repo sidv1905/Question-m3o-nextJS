@@ -62,7 +62,7 @@ To run this project, you will need to add the following environment variables to
 
 `NEXT_PUBLIC_TOKEN` (You can get this from https://m3o.com/answer or I can share the same)
 
-Add the .env file in project root
+Add the .env.local file in project root
 
 ## Authors
 
