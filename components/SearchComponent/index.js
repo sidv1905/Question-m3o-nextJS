@@ -68,7 +68,7 @@ export default function SearchComponent({ Serverdata, title }) {
           value={question}
           onChange={handleChange}
         />
-        <button type="text" onClick={handleSubmit} id="search-button">
+        <button type="submit" onClick={handleSubmit} id="search-button">
           <IconContext.Provider value={{ color: "white", size: 42 }}>
             <BiSearchAlt className="search-icon" height={100} width={100} />
           </IconContext.Provider>
