@@ -8,7 +8,7 @@ A tool where you can ask question and you will get the answer instantly.
 
 ## Screenshots
 
-![App Screenshot](FinalQABANK.gif)
+![App Screenshot](GithubImage/FinalQABANK.gif)
 
 ## Tech Stack
 
