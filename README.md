@@ -62,9 +62,8 @@ To run this project, you will need to add the following environment variables to
 
 `NEXT_PUBLIC_TOKEN` (You can get this from https://m3o.com/answer or I can share the same)
 
-Add the .env.local file in project root (Make a file .env.local add the NEXT_PUBLIC_TOKEN = <TOKEN HERE> and save it in the project root)
-
-# Project root stands for inside Question-m3o-nextJS Folder
+Add the .env.local file in project root (Make a file .env.local add the NEXT_PUBLIC_TOKEN = <TOKEN HERE> and save it in the project root).
+Project root stands for (inside Question-m3o-nextJS Folder)
 
 ## Authors
 
