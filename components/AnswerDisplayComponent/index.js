@@ -3,7 +3,6 @@ import backImage from "../../public/undraw_void_-3-ggu.svg";
 import Loader from "react-loader-spinner";
 
 export default function AnswerDisplayComponent({ answer, loading, question }) {
-  console.log(answer);
   if (loading) {
     return (
       <div>

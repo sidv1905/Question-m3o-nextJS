@@ -11,10 +11,6 @@ import localeJSON from "../locales/locale.json";
 export default function Home({ data }) {
   const router = useRouter();
   const { locale, locales, defaultLocale } = router;
-  console.log(localeJSON);
-
-  console.log(locale, locales, defaultLocale, "NEXTJS LOCALE");
-  console.log("question + data from server", data);
 
   return (
     <div className={styles.container}>
@@ -26,7 +22,6 @@ export default function Home({ data }) {
 export async function getServerSideProps({ query }) {
   const question = query.question;
   if (query.question) {
-    console.log(query.question, "query params");
     const { data } = await client.query({
       query: queryGet,
       context: { clientName: "rest" },
@@ -37,7 +32,6 @@ export async function getServerSideProps({ query }) {
       },
     });
 
-    console.log(question, data, " in server");
     return {
       props: {
         data: data,

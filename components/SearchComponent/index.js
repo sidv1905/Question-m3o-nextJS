@@ -5,9 +5,9 @@ import { queryGet } from "../../apis/queries/getAnswers";
 import { BiSearchAlt } from "react-icons/bi";
 import { IconContext } from "react-icons";
 import AnswerDisplayComponent from "../AnswerDisplayComponent";
+import client from "../../apis/apollo-client";
 
 export default function SearchComponent({ Serverdata, title }) {
-  console.log(Serverdata, "SERVER DATA");
   const [question, setQuestion] = useState("");
   const [getAnswer, { loading, error, data }] = useLazyQuery(queryGet, {
     context: { clientName: "rest" },
@@ -25,18 +25,34 @@ export default function SearchComponent({ Serverdata, title }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Check if in apollo client cache if not then go for server side
-
-    getAnswer({
-      context: { clientName: "rest" },
-      variables: {
-        input: {
-          query: question,
+    try {
+      const data = client.readQuery({
+        query: queryGet,
+        context: { clientName: "rest" },
+        variables: {
+          input: {
+            query: question,
+          },
         },
-      },
-    });
+      });
+      if (data) {
+        console.log(data, "data from cache");
+      } else {
+        console.log("data from server");
+      }
+    } catch (err) {
+      console.log(err, "err data from cache");
+    } finally {
+      getAnswer({
+        context: { clientName: "rest" },
+        variables: {
+          input: {
+            query: question,
+          },
+        },
+      });
+    }
   };
-
-  console.log(data, loading, error);
 
   return (
     <div className={styles.mainContainer}>
