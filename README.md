@@ -34,16 +34,17 @@ The reason I love NextJS :
 
 To Install the project :
 
-After cloning:
+1.
 
 ```bash
+  git clone https://github.com/sidv1905/Question-m3o-nextJS.git
 
   cd Question-m3o-nextJS
 
 
 ```
 
-Now install all the node requirements.
+2.
 
 ```bash
 
@@ -53,11 +54,13 @@ Now install all the node requirements.
 
 ```
 
+3. Add Env file as shared in root project
+
 ## Environment Variables
 
 To run this project, you will need to add the following environment variables to your .env file
 
-`TOKEN` (You can get this from https://m3o.com/answer or I can share the same)
+`NEXT_PUBLIC_TOKEN` (You can get this from https://m3o.com/answer or I can share the same)
 
 Add the .env file in project root
 
@@ -67,7 +70,7 @@ Add the .env file in project root
 
 ## Feedback
 
-If you have any feedback, please reach out to us at sidvarangaonkar1905@gmail.com
+If you have any feedback, please reach out to me at sidvarangaonkar1905@gmail.com
 
 ## 🚀 About Me
 
